@@ -53,6 +53,7 @@ input[type=submit] {
   outline: none;
   border: none;
   background: #fff;
+  -webkit-border-radius: 0;
   border-radius: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -194,12 +195,14 @@ input:disabled {
 html {
   color: #333;
   font-size: 62.5%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 html *,
 html *::before,
 html *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -235,9 +238,6 @@ input[type=submit] {
 
 input {
   color: #333;
-}
-input::-moz-placeholder {
-  color: #7b7b7b;
 }
 input::placeholder {
   color: #7b7b7b;
@@ -550,6 +550,8 @@ a:hover {
 }
 .p-main__portfolio__items:nth-child(2n) .p-main__portfolio__right__textbox__skill {
   text-align: right;
+  padding-right: 0;
+  padding-left: 30px;
 }
 @media (max-width: 1079px) {
   .p-main__portfolio__items:nth-child(2n) .p-main__portfolio__right__textbox__skill {
@@ -707,22 +709,29 @@ a:hover {
     margin-top: 30px;
   }
 }
-.p-main__portfolio__right__textbox__sub-text {
+.p-main__portfolio__right__textbox__project {
   width: 100%;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.p-main__portfolio__right__textbox__work {
+  width: 100%;
+  margin-top: 10px;
 }
 .p-main__portfolio__right__textbox__skill {
   width: 100%;
   margin-top: 20px;
+  padding-right: 30px;
 }
 .p-main__portfolio__right__textbox__skill li {
   display: inline-block;
   padding: 5px 10px;
-  background: #333;
+  background: #efefef;
   border-radius: 20px;
-  color: #FFF;
-  font-size: 12px;
+  color: #333;
+  font-size: 10px;
   font-weight: bold;
-  margin: 0 5px 10px 5px;
+  margin: 0 2px 4px 2px;
   font-family: "Montserrat";
 }
 @media (max-width: 768px) {
